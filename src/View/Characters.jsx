@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import CharacterList from '../Components/CharacterList';
 import { getCharacters } from '../services/characters';
 
-export default function Fruits() {
+export default function Characters() {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -20,7 +20,6 @@ export default function Fruits() {
 
   return (
     <div>
-      <h1>Characters view</h1>
       <CharacterList characters={characters} />
     </div>
   );
