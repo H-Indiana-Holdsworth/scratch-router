@@ -30,7 +30,7 @@ export default function CharacterDetail() {
   return (
     <div>
       <p>
-        <img src={imageUrl} />
+        <img src={imageUrl} alt={`${name}`} />
       </p>
       <p>{name}</p>
       <div>

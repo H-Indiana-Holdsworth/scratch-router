@@ -14,7 +14,7 @@ const server = setupServer(
 beforeAll(() => server.listen());
 afterAll(() => server.close());
 
-test.only('should render header and character names with images', async () => {
+test('should render header and character names with images', async () => {
   render(
     <MemoryRouter>
       <Characters />

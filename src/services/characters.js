@@ -7,5 +7,6 @@ export async function getCharacters() {
 export async function getCharacterById(characterId) {
   const response = await fetch(`https://api.disneyapi.dev/characters/${characterId}`);
   const data = await response.json();
+  console.log('single data', data);
   return data;
 }

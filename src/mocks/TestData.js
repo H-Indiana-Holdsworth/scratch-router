@@ -697,3 +697,17 @@ export const character = {
     },
   ],
 };
+
+export const mockSingleCharacter = {
+  _id: 6,
+  films: [],
+  shortFilms: [],
+  tvShows: [],
+  videoGames: [],
+  parkAttractions: [],
+  allies: [],
+  enemies: [],
+  name: "'Olu Mel",
+  imageUrl: 'https://static.wikia.nocookie.net/disney/images/6/61/Olu_main.png',
+  url: 'https://api.disneyapi.dev/characters/6',
+};
