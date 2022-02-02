@@ -1,7 +1,7 @@
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import './App.css';
-import CharacterDetail from './View/CharacterDetail';
-import Characters from './View/Characters';
+import CharacterDetail from './View/CharacterDetail/CharacterDetail';
+import Characters from './View/Characters/Characters';
 
 function App() {
   return (

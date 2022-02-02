@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import { getCharacterById } from '../services/characters';
+import { getCharacterById } from '../../services/characters';
 
 export default function CharacterDetail() {
   const [charDetails, setCharDetails] = useState({});
