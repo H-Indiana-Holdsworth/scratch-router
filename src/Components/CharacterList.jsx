@@ -13,7 +13,7 @@ export default function CharacterList({ characters }) {
               <p>{name}</p>
               <Link to={`/characters/${_id}`}>
                 <p>
-                  <img src={imageUrl} width={200} height={200} />
+                  <img src={imageUrl} width={200} height={200} alt={`${name}`} />
                 </p>
               </Link>
             </div>
