@@ -16,7 +16,7 @@ afterAll(() => server.close());
 
 test('should render header and character names with images', async () => {
   render(
-    <MemoryRouter>
+    <MemoryRouter initialEntries={['/characters']} initialIndex={0}>
       <Characters />
     </MemoryRouter>
   );
