@@ -14,9 +14,9 @@ const server = setupServer(
 beforeAll(() => server.listen());
 afterAll(() => server.close());
 
-test.only('should render a character image, name, and link', async () => {
+test('should render a character image, name, and link', async () => {
   render(
-    <MemoryRouter initialEntries={['/characters/5']} initialIndex={1}>
+    <MemoryRouter>
       <CharacterDetail />
     </MemoryRouter>
   );
