@@ -16,16 +16,20 @@ afterAll(() => server.close());
 
 test('should render header and character names with images', async () => {
   render(
-    <MemoryRouter initialEntries={['/characters']} initialIndex={0}>
+    <MemoryRouter>
       <Characters />
     </MemoryRouter>
   );
 
   const heading = await screen.findByRole('heading', { name: /disney characters/i });
-  const img = screen.getByRole('img', { name: /627/i });
-  const name = screen.getByText(/'olu mel/i);
-
   expect(heading).toBeInTheDocument();
+
+  const img = screen.getByRole('img', { name: /627/i });
   expect(img).toBeInTheDocument();
+
+  const name = screen.getByText(/'olu mel/i);
   expect(name).toBeInTheDocument();
+
+  const images = await screen.findAllByRole('img');
+  expect(images).toHaveLength(50);
 });

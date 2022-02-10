@@ -3,7 +3,7 @@ import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import CharacterDetail from './CharacterDetail';
 import { mockSingleCharacter } from '../../mocks/TestData';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Route } from 'react-router-dom';
 
 const server = setupServer(
   rest.get('https://api.disneyapi.dev/characters/:characterId', (req, res, ctx) => {
@@ -16,8 +16,10 @@ afterAll(() => server.close());
 
 test('should render a character image, name, and link', async () => {
   render(
-    <MemoryRouter initialEntries={['/characters/5']} initialIndex={1}>
-      <CharacterDetail />
+    <MemoryRouter initialEntries={['/characters/6']}>
+      <Route exact path="/characters/:characterId">
+        <CharacterDetail />
+      </Route>
     </MemoryRouter>
   );
 
