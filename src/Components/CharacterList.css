@@ -1,0 +1,10 @@
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.character-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
